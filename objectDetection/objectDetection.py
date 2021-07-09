@@ -8,6 +8,10 @@
 
 # pip install imageai --upgrade
 
+# Download the     RetinaNet model file 
+# Google  the  retinanet  model file   --> download it and place it to your current working directory(cwd) i.e. where this code file is written
+
+
 
 from imageai.Detection import ObjectDetection
 import os 
@@ -23,6 +27,7 @@ detections = detector.detectObjectFromImage(input_image = os.path.join(execution
 
 for eachObject in detections:
     print(eachObject["name"] , " : " , eachObject["percentage_probability"])
+
 
 
 
