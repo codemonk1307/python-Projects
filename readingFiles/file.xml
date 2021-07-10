@@ -1,0 +1,12 @@
+
+<root>
+    <key>Developing</key>
+    <value>Python-Application</value>
+
+    <key>Developing</key>
+    <values>Flask-Application</values>
+
+    <key>Developing</key>
+    <value>Node.js-Application</value>
+    <dependency>React-Native</dependency>
+</root>

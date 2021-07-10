@@ -1,0 +1,40 @@
+
+1-What is Light Dependent Resistor?
+
+LDR - An LDR is a component that has a (variable) 
+resistance that changes with the light intensity that 
+falls upon it. This allows them to be used in light 
+sensing circuits.
+A Light Dependent Resistor (LDR) or a photo resistor 
+is a device whose resistivity is a function of the 
+incident electromagnetic radiation. Hence, they are 
+light sensitive devices. They are also called as photo 
+conductors, photo conductive cells or simply 
+photocells.
+The photons in the incident light must have energy superior 
+than the bandgap of the material to make the electrons jump 
+from one band to another band (valance to conduction). 
+Hence, when light having ample energy, more electrons are 
+excited to the conduction band which grades in a large 
+number of charge carriers. When the effect of this process 
+and the flow of the current starts flowing more, the 
+resistance of the device decreases.
+2- Basic functioning of LDR & its circuit designing.
+
+Basic functioning of LDR -LDR is a component that has a 
+(variable) resistance that changes with the light intensity 
+that falls upon it. This allows them to be used in light sensing 
+circuits.
+
+How an LDR (Light Dependent Resistor) Works
+What is an LDR (Light Dependent Resistor)?
+An LDR is a component that has a (variable) resistance that 
+changes with the light intensity that falls upon it. This allows 
+them to be used in light sensing circuit. 
+
+The working principle of an LDR is photoconductivity, that is 
+nothing but an optical phenomenon. When the light is 
+absorbed by the material then the conductivity of the 
+material reduces. When the light falls on the LDR, then the 
+electrons in the valence band of the material are eager to 
+the conduction band.

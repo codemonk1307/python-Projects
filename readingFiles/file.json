@@ -1,0 +1,19 @@
+
+{
+    "text-id" : 2,
+    "user-field" : 4,
+    "id-component" : "456A",
+    "patch-dislay" : "cosmetics",
+
+    "name-diplay": "Samie",
+    "phone": "7082399820",
+    "place": "Kanpur",
+    "dispatcherName": "Ankur",
+    "remarks": "All assets in good condition",
+
+    "id": 1,
+    "productId": 3,
+    "productName": "Lakme-Soap",
+    "qty": 4             
+}
+
