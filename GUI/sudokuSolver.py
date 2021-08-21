@@ -1,4 +1,7 @@
 
+# Don't forget to modify your soduko accordingly such as may be your sudoku contains (0) as empty places and numbers as (integers)
+# Here empty places are considered as "." and numbers as strings
+
 # HELPER ----- FUNCTION 
 def is_valid_move(grid, row, col, number):
     # Check for same number in row 
@@ -21,40 +24,50 @@ def is_valid_move(grid, row, col, number):
     return True
 
 # SOLVE ----- FUNCTION 
-def solve(grid, row, col):
-    if col == 0:
-        if row == 0:
-            return True
-
-    if grid[row][col] > 0:
-        return solve(grid, row, col + 1)
-
-    for num in range(1, 10):
-        if is_valid_move(grid, row, col, num):
-            grid[row][col] = num
-
-            if solve(grid, row, col + 1):
-                return True
-        grid[row][col] = 0
-    return False
-
-
-# MAIN --- CODE 
-grid = [[0, 0, 0, 0, 0, 0, 6, 8, 0],
-        [0, 0, 0, 0, 7, 3, 0, 0, 9],
-        [3, 0, 9, 0, 0, 0, 0, 4, 5],
-        [4, 9, 0, 0, 0, 0, 0, 0, 0],
-        [8, 0, 3, 0, 5, 0, 9, 0, 2],
-        [0, 0, 0, 0, 0, 0, 0, 3, 6],
-        [9, 6, 0, 0, 0, 0, 3, 0, 8],
-        [7, 0, 0, 6, 8, 0, 0, 0, 0],
-        [0, 2, 8, 0, 0, 0, 6, 8, 0]]
-
-if solve(grid, 0, 0):
+def solve(grid):
+    # traversing sudoku grid one entry at a time, update sudoku with possible values
+    # also  keep a  check  if  that values is valid thru backtracking
     for i in range(9):
         for j in range(9):
-            print(grid[i][j], end = "")
-        print()
-else:
-    print("There is no solution to this SUDOKU !!")
+            if board[i][j] == ".":
+                # iterate over grid to check valid solution for sudoku
+                for num in range(1, 10):
+                    if is_valid_move(grid, i, j, str(num)):
+                        grid[i][j] = str(num)
+
+                        # again check if updated grid is valid
+                        if solve(grid):
+                            return True
+                        grid[i][j] = "."
+                # no valid num found via bactracking
+                return False
+    return True
+
+# MAIN --- CODE 
+board = [
+        ["5","3",".",".","7",".",".",".","."],
+        ["6",".",".","1","9","5",".",".","."],
+        [".","9","8",".",".",".",".","6","."],
+        ["8",".",".",".","6",".",".",".","3"],
+        ["4",".",".","8",".","3",".",".","1"],
+        ["7",".",".",".","2",".",".",".","6"],
+        [".","6",".",".",".",".","2","8","."],
+        [".",".",".","4","1","9",".",".","5"],
+        [".",".",".",".","8",".",".","7","9"]
+        ]
+        
+solve(board)
+
+# in-place suduko puzzle gets solved(modified)
+# print(board)
+
+# print in the format of 2-D array
+outputSudoku = []
+for i in range(9):
+    solvedSudoku = []
+    for j in range(9):
+        solvedSudoku.append(board[i][j])
+    outputSudoku.append(solvedSudoku)
+    print(outputSudoku[i])
+
 
